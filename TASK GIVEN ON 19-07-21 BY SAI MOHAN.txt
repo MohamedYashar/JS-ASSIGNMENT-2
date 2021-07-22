@@ -1,0 +1,260 @@
+
+1.PRINT ODD NUMBER IN A ARRAY:
+
+
+ANSWER: 
+
+let arr = [1,2,3,4,5,6,7];
+
+// i want to print odd Number
+
+var printodd = function (x)
+{
+    
+    var box = [];
+    
+    for (i=0; i<x.length; i++)
+    {
+        if(x[i] % 2 !== 0)
+        {
+            box.push(x[i])
+        }
+    }
+return box;
+    
+}
+
+console.log(printodd(arr));
+
+***************************************-----------------*********************************
+
+2. CONVERT ALL THE STRING TO THE TITLE CAPS IN A STRING ARRAY
+
+ANSWER:
+
+var name = ["raj", "sam", "manish", "yash"]
+
+var capname= [];
+
+let printname = function(x)
+{
+    
+for (let i=0; i<x.length; i++)
+    
+    { // to change entire array element in capital letter 
+        var name1= x[i].toUpperCase();
+        capname.push(name1);
+    }
+return (capname);
+    
+}
+
+console.log(printname(name));
+
+
+OR // IF ONLY FIRST LETTER OF STRING TO BE PRINTED INCAPS
+
+var name = ["raj", "sam", "manish", "yash"]
+
+var box = [];
+
+
+var printfirstcap =function (x){
+    
+    for (let i=0; i<x.length;i++){
+    
+    var jass = (x[i].charAt(0).toUpperCase() + x[i].slice(1));
+    
+    box.push(jass);
+    
+}
+return (box);
+}
+
+
+console.log(printfirstcap(name));
+
+
+
+
+
+************************************---------------------*********************************
+3. SUM OF ALL NUMBER IN A ARRAY.
+
+ANSWER:
+
+let arr = [1,2,3,4,5,6,7];
+let sum =0;
+
+let printsum = function(x)
+{
+    for ( let i=0; i<x.length; i++)
+    {    
+    sum += x[i];        
+    }
+    return sum;
+}
+console.log(printsum(arr));
+
+************************************---------------------***************************************
+
+4. RETURN ALL THE PRIME NUMBERS IN A ARRAY.
+
+
+ANSWER:
+
+let vivo = [2,3,4,5,6,7,8,9];
+
+
+var prime=function(arr){
+    
+    var box = [];
+    
+    for (var i=0;i<arr.length;i++)
+    {
+        let isprime=true;
+        
+        if (arr[i]===0 || arr[i]===1){
+            isprime=false;
+        }
+        
+        else if ( arr[i] ===2){
+               isprime=true;
+        }
+    
+    
+        else {          
+            for (var j=2; j <arr[i];j++){
+            if (arr[i] % j===0){ 
+                isprime=false;
+                break;
+            }   
+        }
+        }
+
+        if(isprime){
+            box.push(arr[i]);
+        }
+    }
+    return box;
+}
+
+console.log(prime(vivo))
+******************************************#########***************************************
+5. RETURN ALL PALINDROMES IN AN ARRAY.
+
+
+ANSWER:
+
+let x = [" dad", "madam", "mom", "sister"]
+
+var box = []
+
+
+var palindrome = function(x){
+    
+    
+    for (var i=0; i<x.length; i++)
+{
+    
+    var revstr =  function (str) 
+
+    {
+        return str.split("").reverse().join("");
+    }
+
+    box.push (revstr(x[i]));
+
+}
+
+//console.log(box);
+
+var box2 =[];
+
+for (var j=0; j<=x.length; j++)
+{
+    for( var k =0; k<box.length; k++)
+    {
+        
+        if((box[k]) === x[j])
+        {
+            
+            box2.push(box[k]);
+        }
+        
+    } 
+}
+
+return (box2);
+}
+console.log(palindrome(x));
+
+
+
+*****************************************###############################************************
+
+6. RETURN MEDIAN OF TWO SORTED ARRAYS OF SAME SIZE.
+
+ANSWER:
+
+
+let a = ["vikas","abhinav","abhishek"];
+let b = ["vignesh","malini","vijay"]
+
+var box =[];
+
+var mediansort=function(x,y)
+{
+    if(x.length===y.length){
+        x=x.sort();
+        y=y.sort();
+        let arr=x.concat(y);
+        let median=arr[(arr.length/2)-1]+", "+arr[((arr.length/2))];
+        box.push(median)
+    }else{
+        console.log("invalid input");
+    }
+    return box;
+}
+console.log(mediansort(a,b));
+
+*****************************************###############################************************
+
+7. REMOVE DUPLICATES FROM AN ARRAY.
+ANSWER:
+
+let arr = ["manoj","vimal", "yash",22,22,44,56,56, "manoj"];
+let box =[];
+
+let removeDuplicate = function(x)
+{
+    let x3 = new Set(x);
+        box.push(...x3);        
+        return box;    
+}
+console.log (removeDuplicate(arr));
+
+*****************************************###############################************************
+
+8. ROTATE AN ARRAY BY K TIMES AND RETURN THE ROTATED ARRAY.
+
+ANSWER:
+
+var rotate = function(x,k)
+{
+    for (var i=0; i<k; i++)
+    {
+    x.unshift(x.pop())
+    }
+    return x;
+    
+}
+
+console.log(rotate(arr,5))
+
+
+
+
+
+
+
